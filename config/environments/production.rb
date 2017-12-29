@@ -80,6 +80,10 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
+  
+  config.middleware.use(Rack::Tracker) do
+    handler :google_analytics, { tracker: ENV['GOOGLE_ANALYTICS_KEY'] }
+  end
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false

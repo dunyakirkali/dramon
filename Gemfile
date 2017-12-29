@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
 gem 'materialize-sass'
 gem 'faker'
+gem 'rack-tracker'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
