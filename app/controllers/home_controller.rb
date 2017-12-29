@@ -1,27 +1,33 @@
 class HomeController < ApplicationController
   before_action :set_modules
   before_action :set_module
+  before_action :set_method, only: :index
+  before_action :set_methods
 
   def index
-    if @fkr_module
-      @fkr_method = params[:method]
-      @random = "Faker::#{@fkr_module}".constantize.send(@fkr_method)
-    end
+    @random = "Faker::#{@fkr_module}".constantize.send(@fkr_method)
   end
 
   def module_methods
-    render json: modules_and_methods[@fkr_module.underscore.to_sym].to_json
+    render json: @methods.to_json
   end
 
   private
+
+  def set_methods
+    @methods = modules_and_methods[@fkr_module.underscore.to_sym]
+  end
+
+  def set_method
+    @fkr_method = params[:method] || 'city'
+  end
 
   def set_modules
     @modules = modules_and_methods.keys.map(&:to_s).map(&:camelize)
   end
 
   def set_module
-    return if params[:module].nil?
-    module_name = params[:module].underscore
+    module_name = (params[:module] || 'Address').underscore
     return unless modules_and_methods.keys.include?(module_name.to_sym)
     @fkr_module = module_name.camelize
   end
