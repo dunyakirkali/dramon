@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title Dramon
+    = csrf_meta_tags
+    
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body.white
+    .container.center-align.teal
+      = yield

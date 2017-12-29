@@ -1,2 +1,20 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+.row
+  .col.s12
+    h1 Fake it 'till u make it
+    h2.blue-text= @random ? @random : "Random".split('').shuffle.join
+
+.row
+  .col.s9
+    .row.pink
+      = form_tag root_path, method: 'get', id: 'form_id' do
+        .input-field.col.s12.m6
+          = select_tag :module, options_for_select([ "RockBand", "ChuckNorris" ], @fkr_module)
+          label module
+        .input-field.col.s12.m6
+          = select_tag :method, options_for_select([ "name", "fact" ], @fkr_method)
+          label method
+        .input-field.col.s12
+          = link_to "Generate", root_path(module: 'RockBand'), class: "waves-effect waves-light btn", onclick: "$('#form_id').submit()"
+  .col.s3
+    .row.orange
+      p Advertisement

@@ -12,6 +12,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
+gem 'materialize-sass'
+gem 'faker'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
