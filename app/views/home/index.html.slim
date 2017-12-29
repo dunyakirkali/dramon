@@ -8,7 +8,7 @@
     .row.pink
       = form_tag root_path, method: 'get', id: 'form_id' do
         .input-field.col.s12.m6
-          = select_tag :module, options_for_select([ "RockBand", "ChuckNorris" ], @fkr_module)
+          = select_tag :module, options_for_select(@modules, @fkr_module)
           label module
         .input-field.col.s12.m6
           = select_tag :method, options_for_select([ "name", "fact" ], @fkr_method)

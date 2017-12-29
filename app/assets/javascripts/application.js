@@ -17,5 +17,19 @@
 //= require_tree .
 
 document.addEventListener("turbolinks:load", function() {
+
+  $("#module").on('change', function() {
+    $.get( "home/module_methods?module=" + $(this).val(), function( data ) {
+
+      $('#method').find('option').remove();
+      $.each(data, function( index, value ) {
+        console.log(index, value);
+        var $option = $("<option></option>").attr("value",value).text(value);
+        $('#method').append($option);
+      });
+
+      $('#method').material_select();
+    });
+  });
   $('select').material_select();
 })
