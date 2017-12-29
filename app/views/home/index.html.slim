@@ -14,7 +14,7 @@
           = select_tag :method, options_for_select([ "name", "fact" ], @fkr_method)
           label method
         .input-field.col.s12
-          = link_to "Generate", root_path(module: 'RockBand'), class: "waves-effect waves-light btn", onclick: "$('#form_id').submit()"
+          = submit_tag "Generate", class: "waves-effect waves-light btn"
   .col.s3
     .row.orange
       p Advertisement
