@@ -91,6 +91,10 @@ class HomeController < ApplicationController
         :alcohol,
         :blg,
       ],
+      bitcoin: [
+        :address,
+        :testnet_address,
+      ],
       cat: [
         :name,
         :breed,
