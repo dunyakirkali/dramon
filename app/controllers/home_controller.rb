@@ -95,6 +95,12 @@ class HomeController < ApplicationController
         :address,
         :testnet_address,
       ],
+      book: [
+        :title,
+        :author,
+        :publisher,
+        :genre
+      ],
       cat: [
         :name,
         :breed,
