@@ -101,6 +101,10 @@ class HomeController < ApplicationController
         :publisher,
         :genre
       ],
+      bossa_nove: [
+        :artist,
+        :song
+      ],
       cat: [
         :name,
         :breed,
