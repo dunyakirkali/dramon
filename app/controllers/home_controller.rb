@@ -76,6 +76,11 @@ class HomeController < ApplicationController
         :date,
         :quote,
       ],
+      bank: [
+        :name,
+        :swift_bic,
+        :iban,
+      ],
       cat: [
         :name,
         :breed,
