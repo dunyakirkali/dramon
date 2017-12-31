@@ -41,7 +41,7 @@ class HomeController < ApplicationController
         :secondary_address,
         :building_number,
         :community,
-        :zip_code
+        :zip_code,
         :zip,
         :postcode,
         :time_zone,
