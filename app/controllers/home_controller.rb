@@ -71,6 +71,11 @@ class HomeController < ApplicationController
       aqua_teen_hunger_force: [
         :character,
       ],
+      back_to_the_future: [
+        :character,
+        :date,
+        :quote,
+      ],
       cat: [
         :name,
         :breed,
