@@ -56,6 +56,12 @@ class HomeController < ApplicationController
         :latitude,
         :longitude,
       ],
+      ancient: [
+        :god,
+        :primordial,
+        :titan,
+        :hero
+      ]
       cat: [
         :name,
         :breed,
