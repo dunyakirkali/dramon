@@ -105,6 +105,11 @@ class HomeController < ApplicationController
         :artist,
         :song
       ],
+      business: [
+        :credit_card_number,
+        :credit_card_expiry_date,
+        :credit_card_type,
+      ],
       cat: [
         :name,
         :breed,
