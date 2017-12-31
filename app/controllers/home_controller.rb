@@ -68,6 +68,9 @@ class HomeController < ApplicationController
         :author,
         :semantic_version,
       ],
+      aqua_teen_hunger_force: [
+        :character,
+      ],
       cat: [
         :name,
         :breed,
