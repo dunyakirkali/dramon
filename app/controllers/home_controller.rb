@@ -118,6 +118,12 @@ class HomeController < ApplicationController
       chuck_norris: [
         :fact,
       ],
+      code: [
+        :isbn,
+        :ean,
+        :imei,
+        :asin,
+      ],
       rock_band: [
         :name,
       ]
