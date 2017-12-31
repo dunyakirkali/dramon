@@ -40,6 +40,11 @@ class HomeController < ApplicationController
         :street_address,
         :secondary_address
       ],
+      cat: [
+        :name,
+        :breed,
+        :registry
+      ],
       chuck_norris: [
         :fact
       ],
