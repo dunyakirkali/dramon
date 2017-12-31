@@ -61,7 +61,13 @@ class HomeController < ApplicationController
         :primordial,
         :titan,
         :hero
-      ]
+      ],
+      app: [
+        :name,
+        :version,
+        :author,
+        :semantic_version,
+      ],
       cat: [
         :name,
         :breed,
