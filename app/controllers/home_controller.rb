@@ -81,6 +81,16 @@ class HomeController < ApplicationController
         :swift_bic,
         :iban,
       ],
+      beer: [
+        :name,
+        :style,
+        :hop,
+        :yeast,
+        :malts,
+        :ibu,
+        :alcohol,
+        :blg,
+      ],
       cat: [
         :name,
         :breed,
