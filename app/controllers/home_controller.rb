@@ -124,6 +124,12 @@ class HomeController < ApplicationController
         :imei,
         :asin,
       ],
+      coffee: [
+        :blend_name,
+        :origin,
+        :variety,
+        :notes,
+      ],
       rock_band: [
         :name,
       ]
