@@ -38,18 +38,34 @@ class HomeController < ApplicationController
         :city,
         :street_name,
         :street_address,
-        :secondary_address
+        :secondary_address,
+        :building_number,
+        :community,
+        :zip_code
+        :zip,
+        :postcode,
+        :time_zone,
+        :street_suffix,
+        :city_suffix,
+        :city_prefix,
+        :state,
+        :state_abbr,
+        :country,
+        :country_code,
+        :country_code_long,
+        :latitude,
+        :longitude,
       ],
       cat: [
         :name,
         :breed,
-        :registry
+        :registry,
       ],
       chuck_norris: [
-        :fact
+        :fact,
       ],
       rock_band: [
-        :name
+        :name,
       ]
     }
   end
