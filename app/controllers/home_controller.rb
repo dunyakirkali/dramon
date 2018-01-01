@@ -130,6 +130,13 @@ class HomeController < ApplicationController
         :variety,
         :notes,
       ],
+      color: [
+        :hex_color,
+        :color_name,
+        :rgb_color,
+        :hsl_color,
+        :hsla_color,
+      ],
       rock_band: [
         :name,
       ]
