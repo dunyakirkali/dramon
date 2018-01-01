@@ -2,12 +2,12 @@
   .col.s12
     h1= "Random".split('').shuffle.join
     span= render "donate"
-    h2.blue-text= @random
+    h2#result.blue-text= @random
 
 .row
   .col.s9
     .row.pink
-      = form_tag root_path, method: 'get', id: 'form_id' do
+      = form_tag root_path, method: 'get', id: 'form_id', remote: true do
         .input-field.col.s12.m6
           = select_tag :module, options_for_select(@modules, @fkr_module)
           label module
