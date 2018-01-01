@@ -5,6 +5,7 @@ class HomeController < ApplicationController
   before_action :set_methods
 
   def index
+    @title = "Random".split('').shuffle.join
     @random = "Faker::#{@fkr_module}".constantize.send(@fkr_method)
   end
 

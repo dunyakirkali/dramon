@@ -1,6 +1,6 @@
 .row
   .col.s12
-    h1= "Random".split('').shuffle.join
+    h1#title= @title
     span= render "donate"
     h2#result.blue-text= @random
 
